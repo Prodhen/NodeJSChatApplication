@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <title>Chat_App</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="socket.io.js"></script>
+    <script src="chatApp.js"></script>  
+    <style>
+        #main{
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: white;   
+            display: flex;
+        }
+
+        #user_area {
+            width: 25vw;
+            background-color:yellow;
+            border-left: 1px solid green;
+        }
+
+        #container {
+            width: 75vw;
+            border: 10px solid green;
+            border-radius: 2px;
+   
+        }
+
+        #chat_area {
+            width: 100%;
+            height: 300px;
+            overflow-y: auto;   
+        }
+
+        #output_msg {
+            clear: both;
+            padding: 10px 15px;
+        }
+
+        #input {
+            position: relative;
+        }
+
+        input {
+            padding: 10px 20px;
+            box-sizing: border-box;     
+            display: block;
+            width: 100%;
+  
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+           
+            padding: 14px 0;
+            width: 100%;
+            border-radius: 0 0 2px 2px;
+	   
+        }
+
+        #users {  
+             padding-top: 5px;
+             padding-bottom: 5px;
+        }
+
+        #users li {  
+            text-align: left;
+            padding: 1px 5px;    
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+
+        <div id="container">
+            <h2 style="text-align: center">Chat App</h2>
+            <div id="chat_area">
+                <div id="output_msg"></div>
+            </div>
+
+            <div id="input">
+                <input id="message" type="text" placeholder="Write Your Message" />
+                <input type="file" name="uploadFile" id="uploadFile" />
+            </div>
+
+            <button id="send">Send</button>
+        </div>
+
+        <div id="user_area">
+            
+            <h3 style="text-align: center">Active Users</h3>
+	        <ul id="users"></ul>
+        </div>
+
+    </div>
+</body>
+</html>
